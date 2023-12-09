@@ -1,0 +1,100 @@
+{% extends 'base.html' %} {% load static %}
+<title>{% block title %}What can I do for You?{% endblock %}</title>
+{% block content %}
+<body style="background-color: azure">
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h3>Services</h3>
+        <p>
+          Here's a snapshot of what I bring to the table. Whether it's Fullstack
+          Development or diving deep into Backend expertise, my services are
+          designed to fit your needs. Let's make your projects shine together!
+        </p>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <i class="bx bx-code-alt"></i>
+            </div>
+            <h4 class="title">Backend Development</h4>
+            <p class="description">
+              Proficient in Python with a focus on Django and Django Rest
+              Framework. Familiarity with Fast API for building efficient
+              backend solutions. Database design and management, with experience
+              in MySQL.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <i class="bx bx-layer"></i>
+            </div>
+            <h4 class="title">Fullstack Development</h4>
+            <p class="description">
+              Skills in frontend technologies, including HTML, CSS, and classic
+              JavaScript. Currently learning and implementing React for modern
+              and interactive user interfaces.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <i class="bx bx-cog"></i>
+            </div>
+            <h4 class="title">API Building</h4>
+            <p class="description">
+              Design and implementation of RESTful APIs to connect and interact
+              with various applications.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <i class="fa-solid fa-toolbox"></i>
+            </div>
+            <h4 class="title">Problem solving</h4>
+            <p class="description">
+              Demonstrated ability to approach challenges with a problem-solving
+              mindset. Seeking mentorship and guidance to accelerate
+              professional development.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <h4 class="title">Project Contributions</h4>
+            <p class="description">
+              Collaborating on projects, contributing to project planning, and
+              execution. Very effective teamplayer.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <h4 class="title">Database management</h4>
+            <p class="description">
+              Experience with relational databases, particularly MySQL.
+              Exploring NoSQL databases for a broader understanding of database
+              management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+{% endblock %}

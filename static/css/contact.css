@@ -1,0 +1,87 @@
+body {
+  background-color: #aecece; /* Dark background color for the whole page */
+  color: #fff; /* Text color */
+}
+
+.contact {
+  padding: 60px 0; /* Adjust as needed */
+}
+
+.contact-window {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Adjust alpha channel for transparency */
+  background-blend-mode: overlay;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 100px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}
+
+/* Add this style to create space between form and additional content */
+.contact-form {
+  margin-bottom: 20px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #149ddd; /* Button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0371a1; /* Button color on hover */
+}
+
+.window-title {
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #001837;
+  margin-bottom: 50px;
+}
+
+hr {
+  color: #001837;
+}
+
+.contact-icons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-icons .icon {
+  text-align: center; /* Center text in each icon container */
+}
+
+.contact-icons p {
+  font-size: 12px;
+  margin: 0; /* Remove default margin */
+}

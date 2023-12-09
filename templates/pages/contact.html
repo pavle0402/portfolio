@@ -1,0 +1,114 @@
+{% extends 'base.html' %} {%load static%}
+<head>
+  <title>{% block title %} Contact me {% endblock %}</title>
+</head>
+
+{% block content %}
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-window">
+      <div class="window-title">
+        <h2>Let's get in touch!</h2>
+        <p>
+          I am available 24/7 and open for any proposals. Contact me for
+          exciting opportunities!<br />Feel free to reach out via the form
+          below.
+        </p>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- Left side with image/gif -->
+          <div class="contact-image">
+            <!-- Add your image or gif here -->
+            <img
+              src="{% static 'img/contact.png' %}"
+              alt="Contact Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <!-- Icons for address, phone number, and email -->
+          <div class="contact-icons">
+            <div class="icon">
+              <i class="fas fa-map-marker-alt fa-sm"></i>
+              <p>Mose Pijade 10, 11310</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-phone fa-sm"></i>
+              <p>+381629625997</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-envelope fa-sm"></i>
+              <p>pavles2002@gmail.com</p>
+            </div>
+          </div>
+          <!-- Right side with contact form -->
+          {% if not name %}
+          <div class="contact-form">
+            <form action="#" method="POST" role="form">
+              {%csrf_token%}
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LeuuSkpAAAAAJ63nAXdQjHF-vk601LoegCYfAwP"
+              ></div>
+              <br />
+              <div class="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+          {%else%}
+          <div
+            style="
+              color: black;
+              text-align: center;
+              margin-top: 100px;
+              font-size: larger;
+            "
+          >
+            {% if not captcha_error %}
+            <p>Thank you {{name}}. I will respond as soon as possible!</p>
+            <i class="fa-solid fa-face-laugh-beam"></i>
+          </div>
+          {%else%}
+          <p>Captcha validation failed. Please try again.</p>
+          {%endif%} {%endif%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

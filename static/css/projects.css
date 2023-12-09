@@ -1,0 +1,36 @@
+/* Additional Styles for Project Page */
+#project {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-details h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.loom-video {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio for responsive embed */
+}
+
+.loom-video .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

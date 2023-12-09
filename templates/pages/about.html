@@ -1,0 +1,124 @@
+{% extends 'base.html' %} {% load static %}
+<title>{% block title %} More about Pavle {% endblock %}</title>
+{% block content %}
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+        I am seasoned fullstack developer with a primary focus on backend technologies, just because that suits me the best right now.
+        I bring a wealth of experience in Python, particularly with Django and Django Rest Framework. 
+        Through dedicated learning and hands-on projects, I have gained a deep understanding of
+        these frameworks. <br> 
+        My proficiency extends to Fast API, a recent addition to my skill set, although I am still in process of mastering it.
+        In the backend, I have hands-on experience with MySQL and other relational databases, demonstrating my ability to design robust and efficient data structures. 
+        Currently, I am further expanding my expertise by working with NoSQL databases. <br>
+        In the frontend realm, I leverage HTML, CSS, and JavaScript to create seamless user experiences. 
+        Currently learning React (and getting pretty good at it). I can't wait to apply my skills to upcoming projects and contribute to
+        innovative solutions in the dynamic field of web development.
+      </p>
+      </div>
+      <div class="about-image">
+        <img src="{% static 'img/profile-pic.jpg' %}" alt="Profile Image" />
+      </div>
+    </div>
+    <hr>
+    <div class="about-details">
+      <h3>More about me...</h3>
+      <p class="italic">
+        I am someone who is very disciplined, organized and because of that I am able
+        to constantly learn and become better each day. Learning really never stops for me
+        and I am certain that it will stay like that for my whole life. I always aim for highest results and 
+        never settle for mediocrity.
+      </p>
+      <div class="details-list">
+        <div class="details-item">
+          <span>Birthday:</span>
+          <span>4 February 2002</span>
+        </div>
+        <div class="details-item">
+          <span>Phone:</span>
+          <span>+381 62 962 5997</span>
+        </div>
+        <div class="details-item">
+          <span>City:</span>
+          <span>Smederevo, Serbia</span>
+        </div>
+        <div class="details-item">
+          <span>Age:</span>
+          <span>21</span>
+        </div>
+        <div class="details-item">
+          <span>Degree:</span>
+          <span>In progress <i class="fa-regular fa-face-smile"></i></span>
+        </div>
+        <div class="details-item">
+          <span>Email:</span>
+          <span>pavles2002@gmail.com</span>
+        </div>
+        <div class="details-item">
+          <span>Freelance:</span>
+          <span>Available</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-description">
+      <p class="italic">
+        Not just that I am constantly looking for new things to learn, I learn them very fast as well.
+        I have been quick learner my whole life, but when i started my programming journey I knew that this was 
+        my call. With my passion, discipline and ability to adapt and learn new things quick, sky is the limit! 
+      </p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="skills-sections">
+      <div class="about-skills">
+        <h3>-Technical skills</h3>
+        <ul class="skills-list">
+          <li>Python <i class="fa-brands fa-python fa-xl"></i></li>
+          <li>Django <i class="fa-solid fa-filter fa-lg"></i></li>
+          <li>
+            Fast API
+            <i
+              class="fa-sharp fa-solid fa-bolt fa-lg"
+              style="color: #4fa176"
+            ></i>
+          </li>
+          <li>JavaScript <i class="fa-brands fa-js fa-xl"></i></li>
+          <li>HTML <i class="fa-brands fa-html5 fa-xl"></i></li>
+          <li>CSS <i class="fa-brands fa-css3-alt fa-xl"></i></li>
+          <li>React <i class="fa-brands fa-react fa-xl"></i></li>
+          <li>MySQL <i class="fa-solid fa-database fa-xl"></i></li>
+        </ul>
+      </div>
+      <div class="gap"></div>
+      <div class="about-skills">
+          <h3>-Soft skills</h3>
+          <ul class="skills-list">
+            <li style="background: linear-gradient(90deg, #ff0000, #0000ff)">
+            Communication skills <i class="fa-brands fa-icon1 fa-xl"></i>
+            </li>
+            <li style="background: linear-gradient(90deg, #36ed36, #000000)">
+            Team player <i class="fa-brands fa-icon2 fa-xl"></i>
+            </li>
+            <li style="background: linear-gradient(90deg, #ffff00, #ff00ff)">
+            Problem-solving <i class="fa-brands fa-icon3 fa-xl"></i>
+            </li>
+            <li style="background: linear-gradient(90deg, #0084ff, #00ffd5)">
+            Time management <i class="fa-brands fa-icon3 fa-xl"></i>
+            </li>
+            <li style="background: linear-gradient(90deg, #ff0000, #ff5e00)">
+            Continuous learning <i class="fa-brands fa-icon3 fa-xl"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End About Section -->
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% load static %}
+<title>{%block title%} {{project.title}} {%endblock%}</title>
+
+{%block content%}
+<!-- ======= Project Section ======= -->
+<section id="project" class="project">
+  <div class="container">
+    <div class="project-details">
+      <h1>{{project.title}}</h1>
+      <p class="project-description">{{project.description}}</p>
+      <hr />
+      {% if project.pk == 3%}
+      <h1>Admin's POV</h1>
+      {%endif%} {% if not project.pk == 5 %}
+      <div class="loom-video">
+        <div class="details">{{project.url|safe}}</div>
+        {%endif%} {% if project.pk == 3%}
+        <h1>User's POV</h1>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0">
+          <iframe
+            src="https://www.loom.com/embed/bc56960563074ee58ea7513f2fa11917?sid=96e3e235-8207-402a-a240-f6833d0b989d"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+          ></iframe>
+        </div>
+        {%endif%}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

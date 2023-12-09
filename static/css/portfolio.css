@@ -1,0 +1,93 @@
+/* Add this to your existing styles.css or create a new file */
+/* Portfolio Section */
+#portfolio {
+  padding: 60px 0;
+}
+
+.portfolio-title h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  color: black;
+}
+
+.portfolio-title p {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: black;
+}
+.portfolio-title .note {
+  font-size: 1.1rem;
+  text-align: center;
+  color: rgb(57, 57, 57);
+}
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.portfolio-item img {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 400px;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(
+    20,
+    157,
+    221,
+    0.8
+  ); /* Adjust the background color and opacity */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-info {
+  opacity: 1.2;
+}
+
+.portfolio-info h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.portfolio-links a {
+  display: inline-block;
+  background: #fff;
+  color: #149ddd;
+  padding: 8px 15px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.portfolio-links a:hover {
+  background: #149ddd;
+  color: #fff;
+}

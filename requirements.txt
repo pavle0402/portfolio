@@ -1,0 +1,10 @@
+Django
+Pillow
+pytest
+django-crispy-forms
+django-bootstrap3
+python-decouple
+requests
+python-dotenv
+gunicorn
+django-heroku

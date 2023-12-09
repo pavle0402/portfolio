@@ -1,0 +1,203 @@
+<!-- portfolio.html -->
+{% extends 'base.html' %} {% load static %}
+<title>{% block title %}My Portfolio{% endblock %}</title>
+{% block content %}
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="portfolio-title">
+      <h2>My portfolio</h2>
+      <p>
+        Welcome to my digital playground where I bring ideas to life through
+        code! Below are some of my handcrafted projects that showcase my skills
+        and passion for web development. Each project is a testament to my
+        commitment to creating meaningful and innovative solutions. Take a tour,
+        explore the functionalities, and witness the blend of creativity and
+        technology in action. If you're an employer or collaborator, these
+        projects offer a glimpse into my capabilities as a developer. Please
+        note that my skills are constantly improving. Let's embark on a journey
+        through the world of my creations!
+      </p>
+      <br />
+      <div class="note">
+        <strong
+          >**I have created video demos for each of my projects to provide a
+          convenient way for anyone interested in reviewing them. This approach
+          saves time by eliminating the need for account creation, login
+          processes and similar things. I believe this method streamlines the
+          evaluation process and ensures a hassle-free experience for potential
+          collaborators or employers.</strong
+        >
+      </div>
+    </div>
+    <br />
+
+    <hr />
+    <br />
+
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <img
+            src="{% static 'img/projects/gymsystem.png' %}"
+            class="img-fluid"
+            alt="Project 1"
+          />
+          <div class="portfolio-info">
+            <h3>Gym Management System</h3>
+            <p>
+              Welcome to the PS02 Gym Management System. Comprehensive software
+              application meticulously designed to optimize and simplify the
+              operational facets of fitness facilities.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://github.com/pavle0402/Gym-management-"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source Code</a
+              >
+              <a
+                href="{% url 'project-detail' pk=1%}"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Preview</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <img
+            src="{% static 'img/projects/chatbot.jpg' %}"
+            class="img-fluid"
+            alt="Project 2"
+          />
+          <div class="portfolio-info">
+            <h3>Django Chatbot</h3>
+            <p>
+              Welcome to the django chabot integrated with openai API. This app
+              is using chat gpt 3-5 turbo. It works exactly the same as ChatGPT.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://github.com/pavle0402/Django-Chatbot"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source Code</a
+              >
+              <a
+                href="{% url 'project-detail' pk=2 %}"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Preview</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <img
+            src="{% static 'img/projects/elearning.png' %}"
+            class="img-fluid"
+            alt="Project 2"
+          />
+          <div class="portfolio-info">
+            <h3>Linden E-learning</h3>
+            <p>
+              Welcome to the E-Learning System App, a comprehensive online
+              learning platform meticulously designed to facilitate and elevate
+              the user's learning journey. This project represents a unique and
+              innovative approach to e-learning, driven by the aspiration to
+              provide an exceptional educational experience.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://github.com/pavle0402/Django-E-Learning-System"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source Code</a
+              >
+              <a
+                href="{% url 'project-detail' pk=3 %}"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Preview</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <img
+            src="{% static 'img/projects/logo.png' %}"
+            class="img-fluid"
+            alt="Project 2"
+          />
+          <div class="portfolio-info">
+            <h3>To-do list</h3>
+            <p>
+              Welcome to the To-Do List App, a user-friendly and efficient task
+              management application meticulously crafted to assist you in
+              organizing and optimizing your daily activities.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://github.com/pavle0402/Pavle-s-To-do-List"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source Code</a
+              >
+              <a
+                href="{% url 'project-detail' pk=4 %}"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Preview</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 5 -->
+      <div class="col-lg-6">
+        <div class="portfolio-item">
+          <img
+            src="{% static 'img/projects/crmapp.jpg' %}"
+            class="img-fluid"
+            alt="Project 2"
+          />
+          <div class="portfolio-info">
+            <h3>CRM app</h3>
+            <p>
+              This CRM App is one of the first projects I tackled in Django.
+              While it might not look great to me now, I've decided to include
+              it in my portfolio to show how much I've learned. It's special to
+              me because it's the very first thing I ever created on my web
+              development journey. Because this is such a simple app, I will
+              just provide You with source code, and not video representing the
+              app.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://github.com/pavle0402/CRM-django-app/tree/main"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
