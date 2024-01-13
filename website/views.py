@@ -57,3 +57,7 @@ class ProjectDetailView(DetailView):
     model = Project 
     template_name = "pages/project_preview.html"
     context_object_name = "project"
+
+
+def error_404(request, exception):
+    return render(request, '404.html', {})

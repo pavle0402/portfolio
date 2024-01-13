@@ -1,6 +1,5 @@
 from pathlib import Path
 import os 
-import django_heroku
 import dj_database_url
 from decouple import config
 import os
@@ -8,12 +7,18 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+#REMINDER:
+#Just try it from beggining, look at last chatgpt prompt, u probably fked up whole project. But
+#maybe u didn't, and you just need to follow these steps(you haven't tried this yet):
+#https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku
+#Finish tomorrow, no matter what - 14.12.23. Spend 10 hours if needed. Do nto get up until it is
+#finished.
+
 SECRET_KEY = config("DJANGO_SECRET_KEY")
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*'] 
-#stopped here, continue the video https://www.youtube.com/watch?v=XZoTukqekzY
+ALLOWED_HOSTS = [] 
 
 
 
@@ -58,8 +63,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -104,8 +107,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
                 os.path.join(BASE_DIR, 'static'),
                 )
-
-django_heroku.settings(locals())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

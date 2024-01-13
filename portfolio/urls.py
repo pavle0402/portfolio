@@ -5,3 +5,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("website.urls"))
 ]
+
+handler404 = 'website.views.error_404'

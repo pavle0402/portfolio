@@ -158,3 +158,9 @@
   background-color: #4479a1; /* Dark Blue */
   color: #ffffff; /* White */
 }
+
+.skills-list li:nth-child(9) {
+  /* Linux */
+  background-color: #4e2929; /* Dark Blue */
+  color: #ffffff; /* White */
+}
