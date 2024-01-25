@@ -8,12 +8,8 @@ body {
 }
 
 .contact-window {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.5
-  ); /* Adjust alpha channel for transparency */
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
   background-blend-mode: overlay;
   padding: 20px;
   border-radius: 8px;
@@ -73,15 +69,27 @@ hr {
 .contact-icons {
   margin-bottom: 20px;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
 }
 
 .contact-icons .icon {
-  text-align: center; /* Center text in each icon container */
+  text-align: center;
 }
 
 .contact-icons p {
   font-size: 12px;
-  margin: 0; /* Remove default margin */
+  margin: auto; /* Remove default margin */
+}
+
+@media screen and (max-width: 1150px) {
+  .contact-window {
+    margin-left: 0; /* Adjust margin for smaller screens */
+  }
+  .g-recaptcha {
+    width: 100%;
+    transform: scale(0.8); /* Adjust the scale factor as needed */
+    text-align: center;
+    width: 100%;
+  }
 }

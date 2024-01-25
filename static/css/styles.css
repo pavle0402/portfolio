@@ -1,6 +1,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -13,13 +17,32 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+}
+#main {
+  margin-left: 0;
+  transition: margin-left 0.5s;
+}
+
+.main-content {
+  padding: 0;
+  flex: 1;
+  margin-right: 50px;
+}
+
+/* Add the following styles */
+.content-wrapper {
+  display: flex;
+  transition: margin-left 0.5s;
+}
+
+.nav-menu.active ~ .content-wrapper {
+  margin-left: 280px; /* Adjust the value based on your sidebar width */
 }
 
 /*--------------------------------------------------------------
@@ -28,13 +51,14 @@ h6 {
 #header {
   position: fixed;
   top: 0;
+  text-align: center;
   left: 0;
   bottom: 0;
   width: 300px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
-  padding: 0 15px;
+  padding: 10px 15px;
   background: #040b14;
   overflow-y: auto;
 }
@@ -48,29 +72,39 @@ h6 {
 }
 
 #header .profile h1 {
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
+  font-size: 34px;
   font-weight: 600;
-  -moz-text-align-last: center;
-  text-align-last: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
 }
 
-#header .profile h1 a,
+/* Increase specificity for the h1 element */
+#header .profile h1 a {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
 #header .profile h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
 
+#header .profile .social-links {
+  margin-right: 10px;
+}
 #header .profile .social-links a {
   font-size: 18px;
-  display: inline-block;
-  background: #212431;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
+  display: inline-flex;
+  background: #cfcdcd;
+  color: #171717;
+  line-height: 0;
+  padding: 14px 6px;
+  margin-right: 6px;
+  margin-bottom: 16px;
   border-radius: 50%;
   text-align: center;
   width: 36px;
@@ -79,47 +113,16 @@ h6 {
 }
 
 #header .profile .social-links a:hover {
-  background: #149ddd;
+  background: #3eb6ed;
   color: #fff;
   text-decoration: none;
-}
-
-#main {
-  margin-left: 300px;
 }
 
 .container,
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
-}
-
-@media (max-width: 1199px) {
-  #header {
-    left: -300px;
-  }
-
-  #main {
-    margin-left: 0;
-  }
-
-  .container,
-  .container-fluid {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
-@media (max-width: 768px) {
-  #main {
-    margin-left: 0;
-    padding-left: 20px; /* Add left padding to move content to the right */
-  }
-
-  .container,
-  .container-fluid {
-    padding-left: 12px; /* Adjust container padding for smaller screens */
-    padding-right: 12px;
-  }
+  z-index: 1;
 }
 
 /*--------------------------------------------------------------
@@ -127,12 +130,13 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-  padding: 30px 0 0 0;
+  padding: 0;
+  width: 100%;
 }
 
 .nav-menu * {
   margin: 0;
-  padding: 0;
+  padding: auto;
   list-style: none;
 }
 
@@ -174,36 +178,65 @@ h6 {
   color: #149ddd;
 }
 
-/* Mobile Navigation */
-.mobile-nav-toggle {
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  z-index: 9998;
-  border: 0;
-  font-size: 24px;
-  transition: all 0.4s;
-  outline: none !important;
-  background-color: #149ddd;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
-  border-radius: 50px;
-  cursor: pointer;
+@media screen and (max-width: 700px) {
+  #header {
+    position: sticky;
+    width: 700px;
+  }
+
+  #header .profile img {
+    margin: 0 auto;
+    display: block;
+    width: 60%; /* Adjust as needed */
+    height: auto;
+    border: 8px solid #2c2f3f;
+  }
+
+  #navbar {
+    flex-direction: column;
+    max-width: max-content;
+    align-items: center; /* Center the items horizontally in the flex container */
+  }
+
+  #navbar ul {
+    text-align: center;
+  }
+
+  #navbar li {
+    font-size: large;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #navbar .profile,
+  #navbar .social-links {
+    text-align: center;
+  }
+  .name a,
+  .nav a:focus {
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+  }
+
+  .name a {
+    left: 50%;
+  }
+
+  .content-wrapper {
+    width: 400px; /* Adjust the max-width as needed */
+  }
 }
 
-.mobile-nav-active {
-  overflow: hidden;
+@media screen and (max-width: 400px) {
+  #header .profile img {
+    width: 80%; /* Adjust as needed */
+  }
 }
-
-.mobile-nav-active #header {
-  left: 0;
-}
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -297,38 +330,4 @@ section {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-  padding: 15px;
-  color: #f4f6fd;
-  font-size: 14px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  z-index: 9999;
-  background: #040b14;
-}
-
-#footer .copyright {
-  text-align: center;
-}
-
-#footer .credits {
-  padding-top: 5px;
-  text-align: center;
-  font-size: 13px;
-  color: #eaebf0;
-}
-
-@media (max-width: 1199px) {
-  #footer {
-    position: static;
-    width: auto;
-    padding-right: 20px 15px;
-  }
 }

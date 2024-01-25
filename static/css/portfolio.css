@@ -1,11 +1,11 @@
 /* Add this to your existing styles.css or create a new file */
 /* Portfolio Section */
 #portfolio {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .portfolio-title h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: center;
   font-size: 3rem;
   font-weight: 500;

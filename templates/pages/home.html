@@ -12,19 +12,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
         color: #fff;
-        height: 100vh; /* Set the hero height to 100% */
         background: url("{% static 'img/hero.webp' %}") center/cover no-repeat
           fixed;
         background-size: cover;
       }
-
       .hero-content {
         padding: 10px 15px;
-        margin-left: 10px;
         border-radius: 30px;
+        margin-top: 50px;
+        margin-right: 50px;
         background-blend-mode: overlay;
+        text-align: center;
         background-color: rgba(
           56,
           56,
@@ -42,17 +41,14 @@
         opacity: 1;
       }
 
-      .hero h1 {
+      .hero h2 {
         font-size: 3em;
         font-weight: 600;
-        margin-bottom: 15px;
-        margin-top: 10px;
       }
 
       .hero p {
         font-size: 1.5em;
         font-weight: 600;
-        margin-bottom: 20px;
       }
 
       .transition {
@@ -76,28 +72,55 @@
       .cta-button:hover {
         background-color: #0056b3;
       }
+      @media screen and (max-width: 1220px) {
+        .hero h2 {
+          font-size: 2.3em;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .hero-content {
+          margin-right: 10px;
+          margin-bottom: 20px;
+          color: black;
+        }
+        .hero h2 {
+          font-size: 2em;
+        }
+        .hero p {
+          font-size: 1.3em;
+        }
+
+        .cta-button {
+          margin-top: 20px;
+          font-size: 1.3em;
+        }
+      }
     </style>
     <title>{%block title%}Pavle's Portfolio{%endblock%}</title>
   </head>
   <body>
-    <div class="hero">
-      <div class="hero-content home-window">
-        <h1>
-          Hi! My name is Pavle Stojicevic
-          <i class="fa-solid fa-face-laugh-beam fa-lg"></i>
-        </h1>
-        <p>
-          I am
-          <span class="transition" id="role"
-            >Passionate Fullstack Developer
-          </span>
-        </p>
-        <p>Welcome to my page!</p>
-        <div class="button-class">
-          <a href="{% url 'about' %}" class="cta-button">About me</a>
-          <a href="{% url 'contact' %}" class="cta-button">Hire me!</a>
+    <div class="container">
+      <main id="main">
+        <div class="hero">
+          <div class="hero-content home-window">
+            <h2>
+              Hi! My name is Pavle Stojicevic
+              <i class="fa-solid fa-face-laugh-beam fa-lg"></i>
+            </h2>
+            <p>
+              I am
+              <span class="transition" id="role"
+                >Passionate Fullstack Developer
+              </span>
+            </p>
+            <p>Welcome to my page!</p>
+            <div class="button-class">
+              <a href="{% url 'about' %}" class="cta-button">About me</a>
+              <a href="{% url 'contact' %}" class="cta-button">Hire me!</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   </body>
   <script>

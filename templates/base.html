@@ -51,33 +51,17 @@
     {% endblock %}
     <title>{% block title %} Pavle {%endblock%}</title>
   </head>
-  <body>
-    {% include 'navbar.html' %} {%block content%} replace me {%endblock%}
+  {% include 'navbar.html' %}
+  <div class="content-wrapper">
+    <main id="main" class="main-content">
+      {%block content%} replace me {%endblock%}
+    </main>
+  </div>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Pavle Stojicevic</span></strong>
-        </div>
-        <div class="credits"></div>
-      </div>
-    </footer>
-
-    <!-- scripts -->
-    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
-    <script src="{% static 'vendor/aos/aos.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
-    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
-    <script src="{% static 'vendor/typed.js/typed.umd.js' %}"></script>
-    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
-    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
-    <script
-      src="https://kit.fontawesome.com/f076b59054.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </body>
+  <!-- scripts -->
+  <script
+    src="https://kit.fontawesome.com/f076b59054.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>
